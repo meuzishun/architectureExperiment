@@ -26,15 +26,15 @@ html {
 .form {
   font-size: 1.2rem;
   text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .new-person-form {
 }
 
 .new-programmer-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
 input {

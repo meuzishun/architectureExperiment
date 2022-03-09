@@ -1,5 +1,4 @@
-import { Person } from './js/modules/person.js';
-import { Programmer } from './js/modules/programmer.js';
-import { UI } from './js/UI.js';
+import { state } from './js/state.js';
+import { forms } from './js/forms.js';
 
-UI.renderNewProgrammerForm();
+forms.renderNewPersonForm();
