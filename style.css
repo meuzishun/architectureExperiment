@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+.popup {
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 1rem;
+}
+
+.form {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.new-person-form {
+}
+
+.new-programmer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.25rem;
+}
