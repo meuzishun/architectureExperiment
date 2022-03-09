@@ -1,5 +1,5 @@
-import { Person } from './modules/person.js';
-import { Programmer } from './modules/programmer.js';
+import { Person } from './classes/person.js';
+import { Programmer } from './classes/programmer.js';
 
 export const state = (function () {
   const people = [];
