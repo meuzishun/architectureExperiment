@@ -70,7 +70,14 @@ input {
 
 .person-container,
 .programmer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   padding: 2rem;
   border: 1px solid #333;
   border-radius: 0.5rem;
+}
+
+.programmer-languages > li {
+  margin-left: 1rem;
 }

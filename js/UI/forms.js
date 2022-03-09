@@ -1,4 +1,5 @@
 import { state } from '../state.js';
+import { mainDisplay } from './mainDisplay.js';
 
 export const forms = (function () {
   const createModalContainer = function () {
@@ -91,16 +92,24 @@ export const forms = (function () {
     state.addPerson(values);
     removeEntireModal(form);
     console.log(state.getPeople());
+    mainDisplay.renderPeopleDisplay();
   };
 
   const handleProgrammerFormSubmission = function (e) {
     e.preventDefault();
     const form = e.srcElement;
     const inputs = [...form].filter((input) => input.type !== 'submit');
-    const values = inputs.map((input) => input.value);
+    const values = inputs.map((input) => {
+      if (input.id === 'languages') {
+        const text = input.value.replace(/,/g, '').split(' ');
+        return text;
+      }
+      return input.value;
+    });
     state.addProgrammer(values);
     removeEntireModal(form);
     console.log(state.getProgrammers());
+    mainDisplay.renderProgrammersDisplay();
   };
 
   const renderNewPersonForm = function () {
